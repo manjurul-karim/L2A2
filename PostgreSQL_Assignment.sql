@@ -30,9 +30,13 @@ ORDER BY r.name;
 
 SELECT common_name
 FROM species sp
-    LEFT JOIN sightings si ON sp.species_id = si.species_id
 WHERE
-    si.species_id IS NULL;
+    NOT EXISTS (
+        SELECT si.species_id
+        FROM sightings si
+        WHERE
+            si.species_id = sp.species_id
+    );
 
 --* 6️⃣ Show the most recent 2 sightings.
 
