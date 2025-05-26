@@ -1,10 +1,10 @@
 # 1️⃣. What is postgreSQL?
 
-<p>In the digital age, data is everything. If we are building a small web app or running a large enterprise system, we need a powerful, reliable database.
+<p>In the digital age, data is everything. If we are building a small web app or a large enterprise system, we need a powerful, reliable database.
 
 **PostgreSQL**  is a **powerful, open-source, object-relational database system**. It has a strong reputation for reliability, data integrity, and performance.It was first released in 1989 at the University of California, Berkeley, and has grown into one of the most trusted database systems in the world.
 
-__PostgreSQL = "Postgres" + "Structured Query Language (SQL)"__ Many developers just call it `Postgres`.
+__PostgreSQL = "Postgres" + "Structured Query Language (SQL)"__. Many developers just call it `Postgres`.
 
 PostgreSQL stores our data in **tables**. just like other relational databases  and  interact with it using `SQL` (Structured Query Language).
 
@@ -16,7 +16,7 @@ __We can do with postgreSQL:__
 * Use stored procedures, functions, and triggers for complex logic
 
 PostgreSQL runs as a **server**, which means it listens  requests from client applications and responds with data.
-**It's Open Source and Free-** No license fees. we can use and modify PostgreSQL as we wish and **It’s Feature-Rich-** PostgreSQL supports advanced SQL features.PostgreSQL has a huge and active developer community. Updates and new features are released regularly.
+**It's Open Source and Free-** No license fees. we can use and modify PostgreSQL as we wish and **It’s Feature-Rich.** PostgreSQL supports advanced SQL features.PostgreSQL has a huge and active developer community. Updates and new features are released regularly.
 
 PostgreSQL is ACID-compliant, which means transactions are **Atomic, Consistent, Isolated, and Durable**. It also supports **point-in-time recovery**, **replication**, and **automatic failover**.
 
@@ -40,9 +40,9 @@ __Popular Companies Using PostgreSQL:__
 
 # 2️⃣. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
 
-<p> PostgresSQL store data table wise.A table create with Row and column.Basically every row store different data column wise.if we want to operate CRUD operation in a table we need to identify every row uniquely. postgresSQL makes differences between row/record with key.Key is the one of most important things in database which helps to store data correctly and connect each others tables.
+<p> PostgresSQL store data in table wise.A table create with Row and column.Basically every row store different data column wise.if we want to operate CRUD operation in a table we need to identify every row uniquely. postgresSQL makes differences between row/record with key.Key is the one of most important things in database which helps to store data correctly and connect each others tables.
 
-**Primary Key:** The **primary key** constraint uniquely identifies each record in a table.Primary keys must contain UNIQUE values, and cannot contain NULL values.A table can have only ONE primary key and in the table, this primary key can consist of single or multiple columns.if we want to store any person data here person_Fid can be primary key.
+**Primary Key:** The `primary key` constraint uniquely identifies each record in a table.Primary keys must contain UNIQUE values, and cannot contain NULL values.A table can have only ONE `primary key` and in the table, this `primary key` can consist of single or multiple columns.if we want to store any person data here __person_id__ can be `primary key`.
 
 table of person:
 
@@ -52,7 +52,7 @@ table of person:
 | 2         | Karim | 29  | Barishal |
 | 3         | Rahim | 29  | Dhaka    |
 
-In this table has id,name, age and address. if we want to know any of row data we need to uniquely identify from others table otherwise we donn't get exact data. Name, Age, and Address may be repeated in columns in this table so they violate the rules of the primary key.only unique is person_id so id is the primary key for this table.
+In this table has person_id,name, age and address. if we want to know any of row data we need to uniquely identify from others rows otherwise we donn't get exact data. Name, Age, and Address may be repeated so they violate the rules of the primary key.only unique is person_id so `person_id` is the primary key for this table.
 
 **Foreign Key:** A Foreign key is a key that is used as a primary key for another table.we can connect two table using foreign key.The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
 
@@ -65,11 +65,11 @@ In this table has id,name, age and address. if we want to know any of row data w
 | 3        | 2         | 900    | 2025-05-25 |
 | 4        | 3         | 3000   | 2025-05-22 |
 
-Here order_id is the primary key and person_id is the foreign key for the order table. we can connect person table and order table using person_id.
+Here order_id is the primary key and person_id is the foreign key for the order table. we can connect person table and order table using person_id and we can calculate any person expense amount/
 
 </p>
 
-# 4️⃣.What is the difference between the VARCHAR and CHAR data types?
+# 3️⃣.What is the difference between the VARCHAR and CHAR data types?
 
 <p> we can use both  VARCHAR and CHAR when input string but its has different use case.
 
@@ -218,8 +218,6 @@ FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id;
 
 ```
-
-
 
 </p>
 

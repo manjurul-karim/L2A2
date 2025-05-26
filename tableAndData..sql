@@ -1,12 +1,14 @@
 -- Active: 1747645887932@@localhost@5432@conservation_db@public
 CREATE DATABASE conservation_db
 
+--* create rangers table
 CREATE TABLE rangers (
     ranger_id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     region VARCHAR(50) NOT NULL
 );
 
+-- * create species table
 CREATE TABLE species (
     species_id SERIAL PRIMARY KEY,
     common_name VARCHAR(50) NOT NULL,
@@ -15,6 +17,7 @@ CREATE TABLE species (
     conservation_status VARCHAR(50) NOT NULL
 );
 
+-- *
 CREATE TABLE sightings (
     sighting_id SERIAL PRIMARY KEY,
     ranger_id INTEGER NOT NULL REFERENCES rangers(ranger_id) ON DELETE CASCADE,
@@ -23,6 +26,8 @@ CREATE TABLE sightings (
     location VARCHAR(50) NOT NULL,
     notes VARCHAR(50)
 );
+
+-- * insert rangers data
 
 INSERT INTO
     rangers (name, region)
@@ -35,6 +40,8 @@ VALUES (
         'Carol King',
         'Mountain Range'
     );
+
+-- * insert species data
 
 INSERT INTO
     species (
@@ -68,6 +75,7 @@ VALUES (
         'Endangered'
     );
 
+-- * insert sighting data
 INSERT INTO
     sightings (
         species_id,
